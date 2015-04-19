@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+      <link rel = "stylesheet" href="styleprofile.css">
+    <title>Your Profile</title>
+	<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+  </head>
+  
+  <body>
+    <div class = w> 
+	  
+	  <div class = left>
+	  
+        <div class = image>
+		<input type="file" onchange="previewFile()"><br>
+		<img src="" height="200" alt="Image preview..."/>
+          <h3>Meghan Corbett</h3>
+		  <h4>Looking for a new friend!</h4>
+        </div>
+        <div class = text>
+          <p>Hi I'm Meghan, a computer science and mathematics double major at Simmons College. I am excited about having a new roommate because meeting new people is a potentially rewarding experience. I find myself to be a friendly person and think I get along with others well. I would like to be best friends with my roommate! I am a very good student and take my studies very seriously. I don't mind noise in our room, and quiet is fine too. I don't really go out too much on the weekends but every once in a while I will. Mostly, I'll just hang out with friends. I feel as though I am a good problem solver but may need an outside perspective every once in a while. I don't mind confiding in my roommate. I would say I am good at handling stress most of the time. I am so excited!!! </p>
+		</div>
+	 </div>
+	 
+	  <div class = right>
+	  <table class = "left-table">
+        <tr class = graphic>
+		<td>
+        <img src="megpersonality.jpg" height=500px width=500px/>
+      </td>
+        </tr>
+		<tr class = btn-row>
+		<td>
+			<center><a href="roomatematch.html" class=btn>Roommate matches!</a></center>
+			</td>
+		</tr>
+		</table>
+      </div>
+    </div>
+  </body>
+</html>
